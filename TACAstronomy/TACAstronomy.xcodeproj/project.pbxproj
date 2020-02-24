@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E3BD8CD724046DE700688228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CD624046DE700688228 /* AppDelegate.swift */; };
+		E3BD8CD924046DE700688228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CD824046DE700688228 /* SceneDelegate.swift */; };
+		E3BD8CDE24046DE700688228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BD8CDC24046DE700688228 /* Main.storyboard */; };
+		E3BD8CE024046DE900688228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BD8CDF24046DE900688228 /* Assets.xcassets */; };
+		E3BD8CE324046DE900688228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BD8CE124046DE900688228 /* LaunchScreen.storyboard */; };
+		E3BD8CEE24046E7300688228 /* TACMarsMissionManifest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CED24046E7300688228 /* TACMarsMissionManifest.m */; };
+		E3BD8CF2240475C700688228 /* TACManifestFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CF1240475C700688228 /* TACManifestFetcher.m */; };
+		E3BD8D0024047C6D00688228 /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CFA24047C6D00688228 /* LSILog.m */; };
+		E3BD8D0124047C6D00688228 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CFB24047C6D00688228 /* LSIErrors.m */; };
+		E3BD8D0224047C6D00688228 /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CFC24047C6D00688228 /* LSIFileHelper.m */; };
+		E3BD8D0624047F5300688228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D0524047F5300688228 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E3BD8CD324046DE700688228 /* TACAstronomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TACAstronomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3BD8CD624046DE700688228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E3BD8CD824046DE700688228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E3BD8CDD24046DE700688228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3BD8CDF24046DE900688228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3BD8CE224046DE900688228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E3BD8CE424046DE900688228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3BD8CEB24046E7300688228 /* TACAstronomy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TACAstronomy-Bridging-Header.h"; sourceTree = "<group>"; };
+		E3BD8CEC24046E7300688228 /* TACMarsMissionManifest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACMarsMissionManifest.h; sourceTree = "<group>"; };
+		E3BD8CED24046E7300688228 /* TACMarsMissionManifest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACMarsMissionManifest.m; sourceTree = "<group>"; };
+		E3BD8CF0240475C700688228 /* TACManifestFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACManifestFetcher.h; sourceTree = "<group>"; };
+		E3BD8CF1240475C700688228 /* TACManifestFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACManifestFetcher.m; sourceTree = "<group>"; };
+		E3BD8CFA24047C6D00688228 /* LSILog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSILog.m; sourceTree = "<group>"; };
+		E3BD8CFB24047C6D00688228 /* LSIErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIErrors.m; sourceTree = "<group>"; };
+		E3BD8CFC24047C6D00688228 /* LSIFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSIFileHelper.m; sourceTree = "<group>"; };
+		E3BD8CFD24047C6D00688228 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
+		E3BD8CFE24047C6D00688228 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
+		E3BD8CFF24047C6D00688228 /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
+		E3BD8D0524047F5300688228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3BD8CD024046DE700688228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E3BD8CCA24046DE600688228 = {
+			isa = PBXGroup;
+			children = (
+				E3BD8CD524046DE700688228 /* TACAstronomy */,
+				E3BD8CD424046DE700688228 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E3BD8CD424046DE700688228 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3BD8CD324046DE700688228 /* TACAstronomy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3BD8CD524046DE700688228 /* TACAstronomy */ = {
+			isa = PBXGroup;
+			children = (
+				E3BD8CF32404792000688228 /* Controllers */,
+				E3BD8CEA24046E3600688228 /* Model */,
+				E3BD8CD624046DE700688228 /* AppDelegate.swift */,
+				E3BD8CD824046DE700688228 /* SceneDelegate.swift */,
+				E3BD8CF924047C6D00688228 /* LambdaSDK */,
+				E3BD8CDC24046DE700688228 /* Main.storyboard */,
+				E3BD8CDF24046DE900688228 /* Assets.xcassets */,
+				E3BD8CE124046DE900688228 /* LaunchScreen.storyboard */,
+				E3BD8CE424046DE900688228 /* Info.plist */,
+			);
+			path = TACAstronomy;
+			sourceTree = "<group>";
+		};
+		E3BD8CEA24046E3600688228 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3BD8CEC24046E7300688228 /* TACMarsMissionManifest.h */,
+				E3BD8CED24046E7300688228 /* TACMarsMissionManifest.m */,
+				E3BD8CEB24046E7300688228 /* TACAstronomy-Bridging-Header.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E3BD8CEF240475AC00688228 /* Model Controler */ = {
+			isa = PBXGroup;
+			children = (
+				E3BD8CF0240475C700688228 /* TACManifestFetcher.h */,
+				E3BD8CF1240475C700688228 /* TACManifestFetcher.m */,
+			);
+			path = "Model Controler";
+			sourceTree = "<group>";
+		};
+		E3BD8CF32404792000688228 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3BD8CF42404793A00688228 /* ViewControllers */,
+				E3BD8CEF240475AC00688228 /* Model Controler */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E3BD8CF42404793A00688228 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3BD8D0524047F5300688228 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E3BD8CF924047C6D00688228 /* LambdaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				E3BD8CFA24047C6D00688228 /* LSILog.m */,
+				E3BD8CFB24047C6D00688228 /* LSIErrors.m */,
+				E3BD8CFC24047C6D00688228 /* LSIFileHelper.m */,
+				E3BD8CFD24047C6D00688228 /* LSIFileHelper.h */,
+				E3BD8CFE24047C6D00688228 /* LSIErrors.h */,
+				E3BD8CFF24047C6D00688228 /* LSILog.h */,
+			);
+			path = LambdaSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3BD8CD224046DE700688228 /* TACAstronomy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3BD8CE724046DE900688228 /* Build configuration list for PBXNativeTarget "TACAstronomy" */;
+			buildPhases = (
+				E3BD8CCF24046DE700688228 /* Sources */,
+				E3BD8CD024046DE700688228 /* Frameworks */,
+				E3BD8CD124046DE700688228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TACAstronomy;
+			productName = TACAstronomy;
+			productReference = E3BD8CD324046DE700688228 /* TACAstronomy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3BD8CCB24046DE600688228 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Lambda_School_Loaner_218;
+				TargetAttributes = {
+					E3BD8CD224046DE700688228 = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = E3BD8CCE24046DE600688228 /* Build configuration list for PBXProject "TACAstronomy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3BD8CCA24046DE600688228;
+			productRefGroup = E3BD8CD424046DE700688228 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3BD8CD224046DE700688228 /* TACAstronomy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3BD8CD124046DE700688228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BD8CE324046DE900688228 /* LaunchScreen.storyboard in Resources */,
+				E3BD8CE024046DE900688228 /* Assets.xcassets in Resources */,
+				E3BD8CDE24046DE700688228 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3BD8CCF24046DE700688228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BD8D0224047C6D00688228 /* LSIFileHelper.m in Sources */,
+				E3BD8D0024047C6D00688228 /* LSILog.m in Sources */,
+				E3BD8CD724046DE700688228 /* AppDelegate.swift in Sources */,
+				E3BD8D0124047C6D00688228 /* LSIErrors.m in Sources */,
+				E3BD8CD924046DE700688228 /* SceneDelegate.swift in Sources */,
+				E3BD8CEE24046E7300688228 /* TACMarsMissionManifest.m in Sources */,
+				E3BD8D0624047F5300688228 /* ViewController.swift in Sources */,
+				E3BD8CF2240475C700688228 /* TACManifestFetcher.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E3BD8CDC24046DE700688228 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3BD8CDD24046DE700688228 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E3BD8CE124046DE900688228 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3BD8CE224046DE900688228 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3BD8CE524046DE900688228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E3BD8CE624046DE900688228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3BD8CE824046DE900688228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TACAstronomy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lambda-Shool-learner.TACAstronomy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TACAstronomy/Model/TACAstronomy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3BD8CE924046DE900688228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TACAstronomy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Lambda-Shool-learner.TACAstronomy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TACAstronomy/Model/TACAstronomy-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3BD8CCE24046DE600688228 /* Build configuration list for PBXProject "TACAstronomy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3BD8CE524046DE900688228 /* Debug */,
+				E3BD8CE624046DE900688228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3BD8CE724046DE900688228 /* Build configuration list for PBXNativeTarget "TACAstronomy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3BD8CE824046DE900688228 /* Debug */,
+				E3BD8CE924046DE900688228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3BD8CCB24046DE600688228 /* Project object */;
+}
