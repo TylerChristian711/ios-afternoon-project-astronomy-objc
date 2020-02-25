@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(TACSolFetcherCompletion) (NSArray *_Nullable sols, NSError *_Nullable error);
+typedef void(^TACSolFetcherCompletion) (NSArray *_Nullable sols, NSError *_Nullable error);
 
 @interface TACSolFetcher : NSObject
 

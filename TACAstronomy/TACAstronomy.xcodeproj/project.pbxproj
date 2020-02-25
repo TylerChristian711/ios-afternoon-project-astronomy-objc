@@ -17,10 +17,12 @@
 		E3BD8D0024047C6D00688228 /* LSILog.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CFA24047C6D00688228 /* LSILog.m */; };
 		E3BD8D0124047C6D00688228 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CFB24047C6D00688228 /* LSIErrors.m */; };
 		E3BD8D0224047C6D00688228 /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CFC24047C6D00688228 /* LSIFileHelper.m */; };
-		E3BD8D0624047F5300688228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D0524047F5300688228 /* ViewController.swift */; };
 		E3BD8D0B24048AF500688228 /* TACMarsSol.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D0A24048AF500688228 /* TACMarsSol.m */; };
 		E3BD8D0E24048DE700688228 /* TACMarsCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D0D24048DE700688228 /* TACMarsCamera.m */; };
 		E3BD8D11240493D300688228 /* TACSolFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D10240493D300688228 /* TACSolFetcher.m */; };
+		E3BD8D1424049F1100688228 /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D1324049F1100688228 /* ConcurrentOperation.swift */; };
+		E3BD8D1624049F6B00688228 /* FetchManifestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D1524049F6B00688228 /* FetchManifestOperation.swift */; };
+		E3BD8D182404A7D700688228 /* MarsSolCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D172404A7D700688228 /* MarsSolCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,13 +44,15 @@
 		E3BD8CFD24047C6D00688228 /* LSIFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIFileHelper.h; sourceTree = "<group>"; };
 		E3BD8CFE24047C6D00688228 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
 		E3BD8CFF24047C6D00688228 /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
-		E3BD8D0524047F5300688228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E3BD8D0924048AF500688228 /* TACMarsSol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACMarsSol.h; sourceTree = "<group>"; };
 		E3BD8D0A24048AF500688228 /* TACMarsSol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACMarsSol.m; sourceTree = "<group>"; };
 		E3BD8D0C24048DE700688228 /* TACMarsCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACMarsCamera.h; sourceTree = "<group>"; };
 		E3BD8D0D24048DE700688228 /* TACMarsCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACMarsCamera.m; sourceTree = "<group>"; };
 		E3BD8D0F240493D300688228 /* TACSolFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACSolFetcher.h; sourceTree = "<group>"; };
 		E3BD8D10240493D300688228 /* TACSolFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACSolFetcher.m; sourceTree = "<group>"; };
+		E3BD8D1324049F1100688228 /* ConcurrentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
+		E3BD8D1524049F6B00688228 /* FetchManifestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManifestOperation.swift; sourceTree = "<group>"; };
+		E3BD8D172404A7D700688228 /* MarsSolCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsSolCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 				E3BD8CEA24046E3600688228 /* Model */,
 				E3BD8CD624046DE700688228 /* AppDelegate.swift */,
 				E3BD8CD824046DE700688228 /* SceneDelegate.swift */,
+				E3BD8D1224049F1100688228 /* Operations */,
 				E3BD8CF924047C6D00688228 /* LambdaSDK */,
 				E3BD8CDC24046DE700688228 /* Main.storyboard */,
 				E3BD8CDF24046DE900688228 /* Assets.xcassets */,
@@ -131,7 +136,7 @@
 		E3BD8CF42404793A00688228 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E3BD8D0524047F5300688228 /* ViewController.swift */,
+				E3BD8D172404A7D700688228 /* MarsSolCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -147,6 +152,15 @@
 				E3BD8CFF24047C6D00688228 /* LSILog.h */,
 			);
 			path = LambdaSDK;
+			sourceTree = "<group>";
+		};
+		E3BD8D1224049F1100688228 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				E3BD8D1324049F1100688228 /* ConcurrentOperation.swift */,
+				E3BD8D1524049F6B00688228 /* FetchManifestOperation.swift */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,13 +239,15 @@
 				E3BD8D0224047C6D00688228 /* LSIFileHelper.m in Sources */,
 				E3BD8D0B24048AF500688228 /* TACMarsSol.m in Sources */,
 				E3BD8D0024047C6D00688228 /* LSILog.m in Sources */,
+				E3BD8D182404A7D700688228 /* MarsSolCollectionViewController.swift in Sources */,
+				E3BD8D1424049F1100688228 /* ConcurrentOperation.swift in Sources */,
 				E3BD8CD724046DE700688228 /* AppDelegate.swift in Sources */,
 				E3BD8D0E24048DE700688228 /* TACMarsCamera.m in Sources */,
 				E3BD8D0124047C6D00688228 /* LSIErrors.m in Sources */,
 				E3BD8CD924046DE700688228 /* SceneDelegate.swift in Sources */,
 				E3BD8CEE24046E7300688228 /* TACMarsMissionManifest.m in Sources */,
-				E3BD8D0624047F5300688228 /* ViewController.swift in Sources */,
 				E3BD8CF2240475C700688228 /* TACManifestFetcher.m in Sources */,
+				E3BD8D1624049F6B00688228 /* FetchManifestOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
