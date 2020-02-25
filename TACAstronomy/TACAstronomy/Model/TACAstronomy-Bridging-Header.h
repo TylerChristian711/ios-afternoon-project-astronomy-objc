@@ -3,3 +3,4 @@
 //
 
 #import "TACManifestFetcher.h"
+#import "TACSolFetcher.h"

@@ -18,6 +18,9 @@
 		E3BD8D0124047C6D00688228 /* LSIErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CFB24047C6D00688228 /* LSIErrors.m */; };
 		E3BD8D0224047C6D00688228 /* LSIFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8CFC24047C6D00688228 /* LSIFileHelper.m */; };
 		E3BD8D0624047F5300688228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D0524047F5300688228 /* ViewController.swift */; };
+		E3BD8D0B24048AF500688228 /* TACMarsSol.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D0A24048AF500688228 /* TACMarsSol.m */; };
+		E3BD8D0E24048DE700688228 /* TACMarsCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D0D24048DE700688228 /* TACMarsCamera.m */; };
+		E3BD8D11240493D300688228 /* TACSolFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D10240493D300688228 /* TACSolFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,12 @@
 		E3BD8CFE24047C6D00688228 /* LSIErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSIErrors.h; sourceTree = "<group>"; };
 		E3BD8CFF24047C6D00688228 /* LSILog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSILog.h; sourceTree = "<group>"; };
 		E3BD8D0524047F5300688228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3BD8D0924048AF500688228 /* TACMarsSol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACMarsSol.h; sourceTree = "<group>"; };
+		E3BD8D0A24048AF500688228 /* TACMarsSol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACMarsSol.m; sourceTree = "<group>"; };
+		E3BD8D0C24048DE700688228 /* TACMarsCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACMarsCamera.h; sourceTree = "<group>"; };
+		E3BD8D0D24048DE700688228 /* TACMarsCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACMarsCamera.m; sourceTree = "<group>"; };
+		E3BD8D0F240493D300688228 /* TACSolFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACSolFetcher.h; sourceTree = "<group>"; };
+		E3BD8D10240493D300688228 /* TACSolFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACSolFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +100,10 @@
 				E3BD8CEC24046E7300688228 /* TACMarsMissionManifest.h */,
 				E3BD8CED24046E7300688228 /* TACMarsMissionManifest.m */,
 				E3BD8CEB24046E7300688228 /* TACAstronomy-Bridging-Header.h */,
+				E3BD8D0924048AF500688228 /* TACMarsSol.h */,
+				E3BD8D0A24048AF500688228 /* TACMarsSol.m */,
+				E3BD8D0C24048DE700688228 /* TACMarsCamera.h */,
+				E3BD8D0D24048DE700688228 /* TACMarsCamera.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +113,8 @@
 			children = (
 				E3BD8CF0240475C700688228 /* TACManifestFetcher.h */,
 				E3BD8CF1240475C700688228 /* TACManifestFetcher.m */,
+				E3BD8D0F240493D300688228 /* TACSolFetcher.h */,
+				E3BD8D10240493D300688228 /* TACSolFetcher.m */,
 			);
 			path = "Model Controler";
 			sourceTree = "<group>";
@@ -206,9 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3BD8D11240493D300688228 /* TACSolFetcher.m in Sources */,
 				E3BD8D0224047C6D00688228 /* LSIFileHelper.m in Sources */,
+				E3BD8D0B24048AF500688228 /* TACMarsSol.m in Sources */,
 				E3BD8D0024047C6D00688228 /* LSILog.m in Sources */,
 				E3BD8CD724046DE700688228 /* AppDelegate.swift in Sources */,
+				E3BD8D0E24048DE700688228 /* TACMarsCamera.m in Sources */,
 				E3BD8D0124047C6D00688228 /* LSIErrors.m in Sources */,
 				E3BD8CD924046DE700688228 /* SceneDelegate.swift in Sources */,
 				E3BD8CEE24046E7300688228 /* TACMarsMissionManifest.m in Sources */,

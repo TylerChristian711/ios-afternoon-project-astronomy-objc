@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     let manifestFetcher = TACManifestFetcher()
+    var manifest: TACMarsMissionManifest?
+    let solFetcher = TACSolFetcher()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +23,10 @@ class ViewController: UIViewController {
             print(manifest.sols)
         }
         
+        solFetcher.fetchPhotos(forRover: "curiosity", withSol: 1000) { (sols, error) in
+            guard error == nil else { return }
+            guard let sols = sols else { return }
+            print(sols)
+        }
     }
 }
