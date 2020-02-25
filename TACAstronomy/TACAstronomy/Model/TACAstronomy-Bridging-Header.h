@@ -5,3 +5,4 @@
 #import "TACManifestFetcher.h"
 #import "TACSolFetcher.h"
 #import "TACMarsSol.h"
+#import "TACMarsSolCollectionViewCell.h"

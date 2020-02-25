@@ -23,6 +23,11 @@
 		E3BD8D1424049F1100688228 /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D1324049F1100688228 /* ConcurrentOperation.swift */; };
 		E3BD8D1624049F6B00688228 /* FetchManifestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D1524049F6B00688228 /* FetchManifestOperation.swift */; };
 		E3BD8D182404A7D700688228 /* MarsSolCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD8D172404A7D700688228 /* MarsSolCollectionViewController.swift */; };
+		E3E889C82405B924000E2BEF /* TACMarsSolCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E889C72405B924000E2BEF /* TACMarsSolCollectionViewCell.m */; };
+		E3E889CA2405BB2D000E2BEF /* URL+Secure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E889C92405BB2D000E2BEF /* URL+Secure.swift */; };
+		E3E889CD2405BCB8000E2BEF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E889CC2405BCB8000E2BEF /* Constants.swift */; };
+		E3E889CF2405C08F000E2BEF /* MarsSolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E889CE2405C08F000E2BEF /* MarsSolDetailViewController.swift */; };
+		E3E889D12405C522000E2BEF /* FetchPhotoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E889D02405C522000E2BEF /* FetchPhotoOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,12 @@
 		E3BD8D1324049F1100688228 /* ConcurrentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
 		E3BD8D1524049F6B00688228 /* FetchManifestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManifestOperation.swift; sourceTree = "<group>"; };
 		E3BD8D172404A7D700688228 /* MarsSolCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsSolCollectionViewController.swift; sourceTree = "<group>"; };
+		E3E889C62405B924000E2BEF /* TACMarsSolCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACMarsSolCollectionViewCell.h; sourceTree = "<group>"; };
+		E3E889C72405B924000E2BEF /* TACMarsSolCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACMarsSolCollectionViewCell.m; sourceTree = "<group>"; };
+		E3E889C92405BB2D000E2BEF /* URL+Secure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Secure.swift"; sourceTree = "<group>"; };
+		E3E889CC2405BCB8000E2BEF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E3E889CE2405C08F000E2BEF /* MarsSolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsSolDetailViewController.swift; sourceTree = "<group>"; };
+		E3E889D02405C522000E2BEF /* FetchPhotoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhotoOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3ABE8292405B6B8001B515E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E3E889C62405B924000E2BEF /* TACMarsSolCollectionViewCell.h */,
+				E3E889C72405B924000E2BEF /* TACMarsSolCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E3BD8CCA24046DE600688228 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +105,8 @@
 		E3BD8CD524046DE700688228 /* TACAstronomy */ = {
 			isa = PBXGroup;
 			children = (
+				E3E889CB2405BCA3000E2BEF /* Constants */,
+				E3ABE8292405B6B8001B515E /* Views */,
 				E3BD8CF32404792000688228 /* Controllers */,
 				E3BD8CEA24046E3600688228 /* Model */,
 				E3BD8CD624046DE700688228 /* AppDelegate.swift */,
@@ -92,6 +114,7 @@
 				E3BD8D1224049F1100688228 /* Operations */,
 				E3BD8CF924047C6D00688228 /* LambdaSDK */,
 				E3BD8CDC24046DE700688228 /* Main.storyboard */,
+				E3E889C92405BB2D000E2BEF /* URL+Secure.swift */,
 				E3BD8CDF24046DE900688228 /* Assets.xcassets */,
 				E3BD8CE124046DE900688228 /* LaunchScreen.storyboard */,
 				E3BD8CE424046DE900688228 /* Info.plist */,
@@ -137,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				E3BD8D172404A7D700688228 /* MarsSolCollectionViewController.swift */,
+				E3E889CE2405C08F000E2BEF /* MarsSolDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -159,8 +183,17 @@
 			children = (
 				E3BD8D1324049F1100688228 /* ConcurrentOperation.swift */,
 				E3BD8D1524049F6B00688228 /* FetchManifestOperation.swift */,
+				E3E889D02405C522000E2BEF /* FetchPhotoOperation.swift */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		E3E889CB2405BCA3000E2BEF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E3E889CC2405BCB8000E2BEF /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,19 +268,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E889CA2405BB2D000E2BEF /* URL+Secure.swift in Sources */,
 				E3BD8D11240493D300688228 /* TACSolFetcher.m in Sources */,
 				E3BD8D0224047C6D00688228 /* LSIFileHelper.m in Sources */,
 				E3BD8D0B24048AF500688228 /* TACMarsSol.m in Sources */,
 				E3BD8D0024047C6D00688228 /* LSILog.m in Sources */,
 				E3BD8D182404A7D700688228 /* MarsSolCollectionViewController.swift in Sources */,
 				E3BD8D1424049F1100688228 /* ConcurrentOperation.swift in Sources */,
+				E3E889CD2405BCB8000E2BEF /* Constants.swift in Sources */,
 				E3BD8CD724046DE700688228 /* AppDelegate.swift in Sources */,
 				E3BD8D0E24048DE700688228 /* TACMarsCamera.m in Sources */,
 				E3BD8D0124047C6D00688228 /* LSIErrors.m in Sources */,
+				E3E889D12405C522000E2BEF /* FetchPhotoOperation.swift in Sources */,
+				E3E889CF2405C08F000E2BEF /* MarsSolDetailViewController.swift in Sources */,
 				E3BD8CD924046DE700688228 /* SceneDelegate.swift in Sources */,
 				E3BD8CEE24046E7300688228 /* TACMarsMissionManifest.m in Sources */,
 				E3BD8CF2240475C700688228 /* TACManifestFetcher.m in Sources */,
 				E3BD8D1624049F6B00688228 /* FetchManifestOperation.swift in Sources */,
+				E3E889C82405B924000E2BEF /* TACMarsSolCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
