@@ -35,8 +35,6 @@ class MarsSolDetailViewController: UIViewController {
     private func updateViews() {
         guard let sol = sol, self.isViewLoaded else { return }
         descriptionLabel.text = "Taken by \(sol.idNumber) on \(dateFormatter.string(from: sol.earthDate)) (Sol: \(sol.sol))"
-        print(sol.camera.name)
-        print(sol.camera.fullName)
         self.title = sol.camera.name
         cameraLabel.text = sol.camera.fullName
         fetchImage(for: sol)

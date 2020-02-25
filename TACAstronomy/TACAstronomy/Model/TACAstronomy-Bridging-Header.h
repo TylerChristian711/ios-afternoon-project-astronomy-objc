@@ -6,3 +6,5 @@
 #import "TACSolFetcher.h"
 #import "TACMarsSol.h"
 #import "TACMarsSolCollectionViewCell.h"
+#import "TACFetchManifestOperation.h"
+#import "TACFetchPhotoOperation.h"

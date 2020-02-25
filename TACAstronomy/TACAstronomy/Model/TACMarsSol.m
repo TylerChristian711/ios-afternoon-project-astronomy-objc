@@ -28,6 +28,7 @@ static NSDateFormatter *_dateFormatter;
         _idNumber = idNumber;
         _sol = sol;
         _imageURL = [imageURL copy];
+        _camera = camera;
         _earthDate = earthDate;
     }
     return self;

@@ -20,19 +20,50 @@ class MarsSolCollectionViewController: UICollectionViewController {
     let photoQueue = OperationQueue()
     var sols = [TACMarsSol]()
     var solToSend: TACMarsSol?
+    private let solLabel = UILabel()
+    private var solIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTitleView()
         loadPhotos()
     }
     
+    private func configureTitleView() {
+        solLabel.text = "Sol --"
+        let font = UIFont.systemFont(ofSize: 30)
+        let attributes = [NSAttributedString.Key.font: font]
+        
+        let prevTitle = NSAttributedString(string: "<", attributes: attributes)
+        let prevButton = UIButton(type: .system)
+        prevButton.accessibilityIdentifier = "MarsSolCollectionViewController.PreviousSolButton"
+        prevButton.setAttributedTitle(prevTitle, for: .normal)
+        prevButton.addTarget(self, action: #selector(gotToPerviousSol(_:)), for: .touchUpInside)
+        
+        let nextTitle = NSAttributedString(string: ">", attributes: attributes)
+        let nextButton = UIButton(type: .system)
+        nextButton.accessibilityIdentifier = "MarsSolCollectionViewController.NextSolButton"
+        nextButton.setAttributedTitle(nextTitle, for: .normal)
+        nextButton.addTarget(self, action: #selector(goToNextSol(_:)), for: .touchUpInside)
+        
+        let stackView = UIStackView(arrangedSubviews: [prevButton, solLabel, nextButton])
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        stackView.spacing = UIStackView.spacingUseSystem
+        
+        navigationItem.titleView = stackView
+    }
+    
     private func loadPhotos() {
-        let manifestFetchOperation = fetchManifestOperation(manifestFetcher: manifestFetcher)
+        let manifestFetchOperation = FetchManifestOperation(manifestFetcher: manifestFetcher)
         let photoOperation = BlockOperation {
-            self.solFetcher.fetchPhotos(forRover: "curiosity", withSol: manifestFetchOperation.manifest!.sols[0] as! NSNumber) { sols, error in
+            guard let manifest = manifestFetchOperation.manifest,let sol = manifest.sols[self.solIndex] as? NSNumber else {return}
+            self.solFetcher.fetchPhotos(forRover: "curiosity", withSol: sol ) { sols, error in
                 guard error == nil else { return }
                 guard let sols = sols as? [TACMarsSol] else { return }
                 self.sols = sols
+                self.solLabel.text = "Sol \(sol)"
                 self.collectionView.reloadData()
             }
         }
@@ -40,6 +71,35 @@ class MarsSolCollectionViewController: UICollectionViewController {
         photoQueue.addOperation(manifestFetchOperation)
         OperationQueue.main.addOperation(photoOperation)
         
+    }
+    
+    @objc private func gotToPerviousSol(_ sender: Any){
+        solIndex = (solIndex <= 0) ? 0 : solIndex - 1
+        setSol()
+    }
+    
+    @objc private func goToNextSol(_ sender: Any) {
+        solIndex = (solIndex >= sols.count - 1) ? sols.count : solIndex + 1
+        setSol()
+    }
+    
+    private func setSol() {
+        if solIndex < sols.count && solIndex >= 0 {
+            let manifestFetchOperation = FetchManifestOperation(manifestFetcher: manifestFetcher)
+            let photoOperation = BlockOperation {
+                guard let manifest = manifestFetchOperation.manifest,let sol = manifest.sols[self.solIndex] as? NSNumber else {return}
+                self.solFetcher.fetchPhotos(forRover: "curiosity", withSol: sol ) { sols, error in
+                    guard error == nil else { return }
+                    guard let sols = sols as? [TACMarsSol] else { return }
+                    self.sols = sols
+                    self.solLabel.text = "Sol \(sol)"
+                    self.collectionView.reloadData()
+                }
+            }
+            photoOperation.addDependency(manifestFetchOperation)
+            photoQueue.addOperation(manifestFetchOperation)
+            OperationQueue.main.addOperation(photoOperation)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
