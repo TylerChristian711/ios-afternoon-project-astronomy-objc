@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *solImageView;
 @property (nonatomic, readonly) TACMarsSol *sol;
 
-- (void)configureCellWithImageURL:(NSURL *)url;
+- (void)configureCellWithSol:(TACMarsSol *)sol;
 
 @end
 

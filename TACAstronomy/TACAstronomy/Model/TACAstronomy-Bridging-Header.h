@@ -8,3 +8,4 @@
 #import "TACMarsSolCollectionViewCell.h"
 #import "TACFetchManifestOperation.h"
 #import "TACFetchPhotoOperation.h"
+#import "TACCache.h"

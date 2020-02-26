@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^TACSolFetcherCompletion) (NSArray *_Nullable sols, NSError *_Nullable error);
 
+NS_SWIFT_NAME(SolFetcher)
 @interface TACSolFetcher : NSObject
 
 

@@ -28,6 +28,7 @@
 		E3E889D42405CEE5000E2BEF /* TACFetchManifestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E889D32405CEE5000E2BEF /* TACFetchManifestOperation.m */; };
 		E3E889D72405D79F000E2BEF /* TACFetchPhotoOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E889D62405D79F000E2BEF /* TACFetchPhotoOperation.m */; };
 		E3E889DA2405E112000E2BEF /* NSURL+NSURL_TACUsingHTTPS.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E889D92405E112000E2BEF /* NSURL+NSURL_TACUsingHTTPS.m */; };
+		E3E889DD2405EA5F000E2BEF /* TACCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E889DC2405EA5F000E2BEF /* TACCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		E3E889D62405D79F000E2BEF /* TACFetchPhotoOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACFetchPhotoOperation.m; sourceTree = "<group>"; };
 		E3E889D82405E06B000E2BEF /* NSURL+NSURL_TACUsingHTTPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+NSURL_TACUsingHTTPS.h"; sourceTree = "<group>"; };
 		E3E889D92405E112000E2BEF /* NSURL+NSURL_TACUsingHTTPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+NSURL_TACUsingHTTPS.m"; sourceTree = "<group>"; };
+		E3E889DB2405EA5F000E2BEF /* TACCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACCache.h; sourceTree = "<group>"; };
+		E3E889DC2405EA5F000E2BEF /* TACCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				E3BD8D0A24048AF500688228 /* TACMarsSol.m */,
 				E3BD8D0C24048DE700688228 /* TACMarsCamera.h */,
 				E3BD8D0D24048DE700688228 /* TACMarsCamera.m */,
+				E3E889DB2405EA5F000E2BEF /* TACCache.h */,
+				E3E889DC2405EA5F000E2BEF /* TACCache.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				E3E889CA2405BB2D000E2BEF /* URL+Secure.swift in Sources */,
 				E3BD8D11240493D300688228 /* TACSolFetcher.m in Sources */,
 				E3BD8D0224047C6D00688228 /* LSIFileHelper.m in Sources */,
+				E3E889DD2405EA5F000E2BEF /* TACCache.m in Sources */,
 				E3BD8D0B24048AF500688228 /* TACMarsSol.m in Sources */,
 				E3E889D42405CEE5000E2BEF /* TACFetchManifestOperation.m in Sources */,
 				E3BD8D0024047C6D00688228 /* LSILog.m in Sources */,

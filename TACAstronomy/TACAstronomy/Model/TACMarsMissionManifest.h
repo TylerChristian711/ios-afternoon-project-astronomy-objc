@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-
+NS_SWIFT_NAME(MarsMissionManifest)
 @interface TACMarsMissionManifest : NSObject
 
 

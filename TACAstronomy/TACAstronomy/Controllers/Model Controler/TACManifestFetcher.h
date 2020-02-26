@@ -11,6 +11,7 @@
 
 typedef void(^TACManifestFetcherCompletion)(TACMarsMissionManifest * _Nullable manifest, NSError  *_Nullable error);
 
+NS_SWIFT_NAME(ManifestFetcher)
 @interface TACManifestFetcher : NSObject
 
 -(void)fetchManifestForRover:(NSString *_Nullable)rover

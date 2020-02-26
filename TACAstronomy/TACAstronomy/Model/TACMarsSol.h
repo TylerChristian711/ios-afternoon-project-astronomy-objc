@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TACMarsCamera.h"
 
+NS_SWIFT_NAME(MarsSol)
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TACMarsSol : NSObject

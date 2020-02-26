@@ -15,7 +15,7 @@ class MarsSolDetailViewController: UIViewController {
     @IBOutlet weak var cameraLabel: UILabel!
     
     var photoQueue = OperationQueue()
-    var sol: TACMarsSol? {
+    var sol: MarsSol? {
         didSet {
             updateViews()
         }
@@ -40,7 +40,7 @@ class MarsSolDetailViewController: UIViewController {
         fetchImage(for: sol)
     }
     
-    private func fetchImage(for sol: TACMarsSol) {
+    private func fetchImage(for sol: MarsSol) {
         let photoFetchOperation = FetchPhotoOperation(sol: sol)
         let completionOperation = BlockOperation {
             guard let image = photoFetchOperation.image else { return }

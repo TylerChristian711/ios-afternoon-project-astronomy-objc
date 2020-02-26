@@ -14,12 +14,12 @@ class MarsSolCollectionViewController: UICollectionViewController {
     
     
     
-    let manifestFetcher = TACManifestFetcher()
-    var manifest: TACMarsMissionManifest?
-    let solFetcher = TACSolFetcher()
+    let manifestFetcher = ManifestFetcher()
+    var manifest: MarsMissionManifest?
+    let solFetcher = SolFetcher()
     let photoQueue = OperationQueue()
-    var sols = [TACMarsSol]()
-    var solToSend: TACMarsSol?
+    var sols = [MarsSol]()
+    var solToSend: MarsSol?
     private let solLabel = UILabel()
     private var solIndex = 0
     
@@ -61,7 +61,7 @@ class MarsSolCollectionViewController: UICollectionViewController {
             guard let manifest = manifestFetchOperation.manifest,let sol = manifest.sols[self.solIndex] as? NSNumber else {return}
             self.solFetcher.fetchPhotos(forRover: "curiosity", withSol: sol ) { sols, error in
                 guard error == nil else { return }
-                guard let sols = sols as? [TACMarsSol] else { return }
+                guard let sols = sols as? [MarsSol] else { return }
                 self.sols = sols
                 self.solLabel.text = "Sol \(sol)"
                 self.collectionView.reloadData()
@@ -90,7 +90,7 @@ class MarsSolCollectionViewController: UICollectionViewController {
                 guard let manifest = manifestFetchOperation.manifest,let sol = manifest.sols[self.solIndex] as? NSNumber else {return}
                 self.solFetcher.fetchPhotos(forRover: "curiosity", withSol: sol ) { sols, error in
                     guard error == nil else { return }
-                    guard let sols = sols as? [TACMarsSol] else { return }
+                    guard let sols = sols as? [MarsSol] else { return }
                     self.sols = sols
                     self.solLabel.text = "Sol \(sol)"
                     self.collectionView.reloadData()
@@ -122,8 +122,7 @@ class MarsSolCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cells.marsCell, for: indexPath) as? TACMarsSolCollectionViewCell else { return UICollectionViewCell() }
         let sol = sols[indexPath.item]
-        guard let url = URL(string: sol.imageURL)?.usingHTTPS else { return UICollectionViewCell() }
-        cell.configureCell(withImageURL: url)
+        cell.configureCell(with: sol)
         return cell
     }
     
